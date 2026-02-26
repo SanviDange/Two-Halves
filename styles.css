@@ -1,0 +1,68 @@
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #e6e6e6;
+}
+
+.instructions {
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.container {
+  position: relative;
+  width: 200px;
+  height: 200px;
+}
+
+.half {
+  position: absolute;
+  width: 100px;
+  height: 200px;
+  transition: transform 0.3s ease;
+}
+
+/* Left half-circle */
+.left {
+  left: 0;
+  background-color:black;
+  border-radius: 100px 0 0 100px;
+  transform: translateX(-120px); /* start apart */
+}
+
+/* Right half-circle */
+.right {
+  right: 0;
+  background-color: white;
+  border-radius: 0 100px 100px 0;
+  transform: translateX(120px); /* start apart */
+}
+
+.circle {
+  width: 200px;
+  height: 200px;
+  background-color: #4c047c;
+  border-radius: 50%;
+}
+
+/* When active, they move outward */
+.move-left {
+    transform: translateX(0);
+}
+
+.move-right {
+    transform: translateX(0);
+}
+
+
+/* When active (both pressed) */
+.join-left {
+  transform: translateX(0);
+}
+
+.join-right {
+  transform: translateX(0);
+}
